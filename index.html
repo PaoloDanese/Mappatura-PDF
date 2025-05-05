@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Compilatore PDF da Excel</title>
+</head>
+
+<div class="title">
+    <h1>Compilatore PDF da Excel</h1>
+</div>
+
+<form id="dataForm">
+    <div class="container">
+        <div>
+            <label class="uploadFile" for="excelFile">Carica il file Excel:</label>
+        </div>
+        <input type="file" id="excelFile" accept=".xlsx, .xls">
+    </div>
+    <div class="infoExcel">
+        <span>Informazioni utili sul file Excel:</span>
+        <p></p>
+    </div>
+    <br>
+    <div class="container">
+        <div>
+            <label class="uploadFile" for="excelFile">Carica il file PDF:</label>
+        </div>
+        <input type="file" id="pdfFile" accept=".pdf">
+    </div>
+    <div class="infoPdf">
+        <span>Informazioni utili sul file PDF:</span>
+        <p></p>
+    </div>
+</form>
+
+<div class="associationsText">
+    <h2>Associazioni PDF-Excel</h2>
+    <p>Si prega di notare che alcune associazioni potrebbero essere create automaticamente. Si consiglia comunque di esaminarle attentamente per verificarne l'accuratezza.</p>
+</div>
+
+<div id="associationContainer">
+    <p>...in attesa dei file...</p>
+</div>
+<div id="compileButton"></div>
+
+<div id="errorContainer"></div>
+
+<pre id=""></pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.extendscript.js"></script>
+<script src="https://unpkg.com/papaparse@latest/papaparse.min.js"></script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.js"></script>
+
+<script src="index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap");
+
+* {
+    /*Reset generici per i valori di margine e padding di default*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*font-size: 16px;*/
+    font-family: "Roboto", monospace;
+    --text-primary: #1d1d1f;
+    --bg-primary: #e6e6fa;
+    color: #1d1d1f;
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+
+.title {
+    font-family: "Poppins", monospace;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    max-width: 100%;
+    background: #6363a8;
+    color: aliceblue;
+    margin-bottom: 20px;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#dataForm {
+    /* border: 1px solid greenyellow; */
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
+
+.uploadFile {
+    font-weight: 600;
+    font-size: 40px;
+    color: #6363a8;
+}
+
+#dataForm .container div {
+    padding-bottom: 15px;
+}
+
+.infoExcel {
+    margin-top: 20px;
+}
+
+.infoExcel span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.infoExcel p {
+    max-width: 70%;
+    margin: auto;
+    line-height: 1.5;
+}
+
+
+.infoPdf {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.infoPdf span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.infoPdf p {
+    max-width: 70%;
+    margin: auto;
+    line-height: 1.5;
+}
+
+/* Stili per i bottoni */
+input[type="file"] {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #D1D1EB;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Stili per il testo del bottone */
+input[type="file"]::file-selector-button {
+    font-weight: 600;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: aliceblue;
+    color: #333;
+    font-size: 16px;
+
+    transition: 0.5s;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #494955;
+    color: aliceblue;
+}
+
+.associationsText {
+    max-width: 50%;
+    margin: auto;
+}
+
+.associationsText h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: #6363a8;
+    margin: 50px 0 10px 0;
+}
+
+.associationsText p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#associationContainer p {
+    font-style: italic;
+}
+
+#associationContainer {
+    text-align: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+#associationContainer label {
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+#associationContainer select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    color: #333;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+#compileButton {
+    text-align: center;
+}
+
+#compileButton button {
+    padding: 8px;
+    font-size: 20px;
+    border: 0px solid #ccc;
+    border-radius: 10px;
+    background-color: #D1D1EB;
+    color: #333;
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#compileButton button:hover {
+    background-color: #494955;
+    color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+#errorContainer {
+    font-family: "Fira Code", monospace;
+    background-color: #D1D1EB;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    max-width: 50%;
+    padding: 20px;
+
+
+    display: none;
+}
+
+.boldError {
+    font-weight: bold;
+    color: #6363a8;
+}
+
+
+@media screen and (max-width: 700px) {
+    .title {
+        font-size: 19px;
+        height: 70px;
+    }
+
+    .uploadFile {
+        font-weight: 600;
+        font-size: 30px;
+        color: #6363a8;
+    }
+
+    .infoExcel p {
+        max-width: 90%;
+    }
+
+    .infoPdf p {
+        max-width: 90%;
+    }
+    
+    .associationsText {
+        max-width: 90%;
+    }
+
+    #errorContainer {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 12px;
+        height: 70px;
+    }
+
+    .uploadFile {
+        font-weight: 600;
+        font-size: 20px;
+        color: #6363a8;
+    }
+
+    .infoExcel span {
+        font-size: 18px;
+    }
+
+    .infoExcel p {
+        font-size: 16px;
+    }
+
+    .infoPdf span {
+        font-size: 18px;
+    }
+
+    .infoPdf p {
+        font-size: 16px;
+    }
+
+    input[type="file"] {
+        max-width: 60%;
+    }
+
+    .associationsText h2 {
+        font-size: 20px;
+    }
+
+    .associationsText p {
+        font-size: 16px;
+    }
+
+    #errorContainer {
+        font-size: 13px;
+    }
+}
